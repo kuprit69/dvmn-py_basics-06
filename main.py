@@ -22,19 +22,23 @@ def is_very_long(password):
     return len(password) > 12
 
 
-password = input("Введите пароль: ")
+def main():
+    password = input("Введите пароль: ")
 
-score = 0
-if is_very_long(password):
-    score += 2
-if has_digit(password):
-    score += 2
-if has_letters(password):
-    score += 2
-if has_upper_letters(password):
-    score += 2
-if has_symbols(password):
-    score += 2
+    score = 0
+    if is_very_long(password):
+        score += 2
+    if has_digit(password):
+        score += 2
+    if has_letters(password):
+        score += 2
+    if has_upper_letters(password):
+        score += 2
+    if has_symbols(password):
+        score += 2
 
-print("Рейтинг пароля:", score, "из 10")
+    print("Рейтинг пароля:", score, "из 10")
 
+
+if __name__ == "__main__":
+    main()
